@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #eef2f7;
+  background: linear-gradient(135deg, #f3f9ff 0%, #dbeafe 100%);
 }
 
 .auth {
@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
 }
 
 .auth-container {
@@ -25,13 +25,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   margin: 20px;
   width: 400px;
-  animation: fadeIn 0.8s ease-in;
+  animation: fadeIn 1s ease-in;
+  border: 3px solid #4a90e2;
 }
 
 .form-group {
@@ -50,12 +51,13 @@ input {
   font-size: 16px;
   border-radius: 5px;
   border: 2px solid #4a90e2;
-  transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 input:focus {
   border: 2px solid #0078ff;
   outline: none;
+  box-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
 }
 
 .navbar {
@@ -68,7 +70,7 @@ input:focus {
   align-items: center;
   color: white;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 a {
@@ -76,11 +78,12 @@ a {
   text-decoration: none;
   margin: 10px;
   font-size: 25px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 a:hover {
-  transform: scale(1.1);
-  border-bottom: 2px dotted red;
+  transform: scale(1.2);
+  color: #ff4757;
+  border-bottom: 2px solid #ff4757;
 }
 
 .create-recipe {
@@ -88,13 +91,14 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   margin: 20px;
-  width: 300px;
-  animation: slideIn 0.8s ease-in-out;
+  width: 350px;
+  animation: slideIn 1s ease-in-out;
+  border: 3px solid #4a90e2;
 }
 
 .create-recipe form {
@@ -108,20 +112,21 @@ ul {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 li {
-  border: 1px solid #4a90e2;
-  padding: 10px;
+  border: 2px solid #4a90e2;
+  padding: 15px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: #e3f2fd;
   transition: transform 0.3s ease-in-out;
 }
 
 li:hover {
-  transform: scale(1.05);
-  background-color: #e3f2fd;
+  transform: scale(1.08);
+  background-color: #d0ebff;
 }
 
 h2 {
@@ -132,47 +137,49 @@ img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 p {
   max-width: 400px;
-  font-size: 12px;
+  font-size: 14px;
   display: -webkit-box;
   line-clamp: 5;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 6em;
+  color: #4a4a4a;
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   background-color: #00cec9;
   border: none;
   color: white;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 button:hover {
   background-color: #0984e3;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
+  from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
+  from { opacity: 0; transform: translateX(-30px); }
   to { opacity: 1; transform: translateX(0); }
 }
